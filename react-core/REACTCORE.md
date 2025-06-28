@@ -1,25 +1,28 @@
 # ENVIRONMENT VARIABLES
 
-### What is .env file ?
+### 1. What is .env file ?
 
 It is plain text configuration file used to store environment variables such as API keys, secrets and environment specific settings without hardcoding them into codebase.
 
-### Why to use .env file ?
+### 2. Why to use .env file ?
 
 Keep secrets out of source code
 Easily switch settings across environments
 Clean and maintainable configuration
 
-### What are environment variables?
+### 3. What are environment variables?
 
 Environment variables are key-value pairs available at runtime that configure how app behaves in different environments (development, production, testing).
 
+### 4. Why we add dot in env file?
 
-### Can .env values be accessed at runtime in frontend apps?
+To make it hidden configuration file which is standard practice. Also .gitignore commonly ignores dotfile by defauly.
+
+### 5. Can .env values be accessed at runtime in frontend apps?
 
 Not directly — in frontend (React, Vite), environment variables are statically embedded at build time, not dynamically read at runtime like in Node.js.
 
-### How can you use different .env files for different environments?
+### 6. How can you use different .env files for different environments?
 
 | File Name          | Used In            |
 | ------------------ | ------------------ |
@@ -28,7 +31,7 @@ Not directly — in frontend (React, Vite), environment variables are statically
 | `.env.production`  | for production     |
 | `.env.local`       | machine-specific   |
 
-### How do you access environment variables in React / Vite?
+### 7. How do you access environment variables in React / Vite?
 
 React (CRA): Use process.env.REACT_APP_XXX
 Vite: Use import.meta.env.VITE_XXX
@@ -36,16 +39,16 @@ Vite: Use import.meta.env.VITE_XXX
 
 # package.json
 
-### What is package.json ?
+### 1. What is package.json ?
 
 package.json is metadata file for node.js (or react) that defines project dependencies, scripts , configurations. It automates task via scripts.
 
-### What is package-lock.json ?
+### 2. What is package-lock.json ?
 
 package-lock.json is an auto-generated file that records the exact versions of every package (and their dependencies) installed in  project.
 
 
-### Difference b/w dependencies and peerDependencies ?
+### 3. Difference b/w dependencies and peerDependencies ?
 
 | **Type**           | **Purpose**                            | **Example Package**       | **When to Use**                                                                  |
 | ------------------ | -------------------------------------- | ------------------------- | -------------------------------------------------------------------------------- |
@@ -57,7 +60,7 @@ package-lock.json is an auto-generated file that records the exact versions of e
 
 # Others
 
-### What is reportWebVitals in a React app?
+### 1. What is reportWebVitals in a React app?
 
 reportWebVitals is a utility in Create React App (CRA) used to measure and report performance metrics of app (like load time, responsiveness, etc.) using Web Vitals API.
 
@@ -69,10 +72,14 @@ It reports Core Web Vitals like:
     - CLS (Cumulative Layout Shift) – visual stability
 
 
-### What is strict mode in React?
+### 2. What is strict mode in React?
 
 Strict Mode is a development-only feature in React that helps to identify potential problems in code — such as unsafe lifecycle methods, legacy API usage, or unexpected side effects.
 
 It doesn’t affect production builds
 It doesn’t block rendering — only warns in dev
 
+
+### 3. What is config driven UI ?
+
+Config-driven UI is a design pattern where the user interface (UI) is generated based on external configuration data (usually JSON), rather than being hardcoded in components.
